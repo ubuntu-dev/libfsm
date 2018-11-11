@@ -40,6 +40,10 @@ You can override a few things:
 
     ; CC=clang PREFIX=$HOME pmake -r install
 
+To install without building the documentation:
+
+    ; CC=clang PREFIX=$HOME pmake -r -DNODOC install
+
 Building depends on:
 
  * Any BSD make. This includes OpenBSD, FreeBSD and NetBSD make(1)
@@ -48,6 +52,12 @@ Building depends on:
  * A C compiler. Any should do, but GCC and clang are best supported.
 
  * ar, ld, and a bunch of other stuff you probably already have.
+
+Building the documentation depends on:
+
+ * xsltproc(1)
+
+ * Docbook XSLT (and its XML catalog entries)
 
 Fuzzing depends on the theft property-based testing library:
 
